@@ -1,45 +1,178 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+*{
   margin: 0;
-  font-family: Arial;
-  background: #EBE7E7;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-.header {
-  text-align: center;
-  padding: 32px;
-  background: #E0DDDD;
-}
-
-#gallery {
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+}
+section .imgSec {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+section .imgSec:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(deg225, #790252, #E80F88);
+  z-index: 4;
+  mix-blend-mode: screen;
+
+}
+section .imgSec img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+h1 .bridge{
+  color: #1f1f25;
+    font-size: 25px;
+    text-transform: camelCase;
+    letter-spacing: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: linear-gradient(120deg, #333C83 20.69%, #F24A72 50.19%,#006778 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+section .content {
+  display: flex;
+  width: 50%;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  padding: 0 4px;
 }
-
-#gallery img {
-  width: 25%;
-  height: 300px;
-  object-fit: cover;
-  margin-top: 8px;
-  padding: 0 4px;
-  border-radius: 10px;
+section .content .form {
+  width: 50%;
 }
+section .content .form  h2{
+color: #231955;
+font-weight: 600;
+font-size: 1.5em;
+text-transform: uppercase;
+margin-bottom: 22px;
+border-bottom:  4px solid #7A86B6;
+display: inline-block;
+letter-spacing: 1.2px;
+}
+section .content .form .inputBox  {
+margin-bottom: 22px;
 
-@media (max-width: 800px) {
-  #gallery img {
+}
+section .content .form .inputBox span {
+  font-size: 18px;
+  margin-bottom: 15px;
+  display: inline-block;
+  color: #495C83;
+  font-weight: 280;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+}
+section .content .form .inputBox input {
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 350;
+  border: 1px solid #A8A4CE;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+  color: #231955;
+  background: transparent;
+  border-radius: 20px;
+}
+section .content .form .inputBox input[type="submit"] {
+  background: #E80F88;
+  color: #231955;
+  border: none;
+  font-weight: 100;
+  cursor: pointer;
+} 
+section .content .form .inputBox input[type="submit"]:hover {
+  background: #FCF8E8;
+}
+section .content .form .remember {
+  margin-bottom: 10px;
+  color: #052e13;
+  font-size: 15px;
+}
+section .content .form .inputBox p {
+  color: #020f27;
+}
+section .content .form .inputBox p a {
+  color: #FA7070;
+}
+section .content .form h3 {
+  color: #87A2FB;
+  text-align: center;
+  margin: 60px 0 10px;
+  font-weight: 300;
+}
+section .content .form .others {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .content .form .others li {
+  list-style: none;
+  width: 80px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #D7C0AE;
+  border-radius: 24px;
+  margin: 0 7px;
+}
+section .content .form .others li:hover {
+background: #967E76;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  section .imgSec {
+    position: relative;
+    top: 0;
+    left: 0;
     width: 50%;
-  }
+    height: 100%;
 }
-
-@media (max-width: 600px) {
-  #gallery img {
-    width: 100%;
-  }
+section .content .form {
+  width: 100%;
+  padding: 40px;
+  background: #EEE3CB;
+  background: rgb(255 255 255 / 0.9);
+  margin: 10px;
+}
+section .content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+section .content .form h3 {
+  color: #87A2FB;
+  text-align: center;
+  margin: 20px 0 10px;
+  font-weight: 300;
+}
 }
